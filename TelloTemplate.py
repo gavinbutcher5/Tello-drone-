@@ -45,7 +45,10 @@ recvThread.start()
 
 
 def first_hoop():
-    
+    sendmsg('up 20')
+    sendmsg('forward 200')
+
+
 #def second_hoop():
 
 #def third_hoop():
@@ -67,8 +70,7 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        # Review the (SDK) Software Development Kit resource for Drone Commands
-        # Delete these comments before writing your program
+        first_hoop()
 
         sendmsg('land')
 
