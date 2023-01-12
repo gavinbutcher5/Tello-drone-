@@ -44,16 +44,7 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 
-def first_hoop():
-    sendmsg('up 20')
-    sendmsg('forward 200')
 
-
-#def second_hoop():
-
-#def third_hoop():
-
-#def last_hoop():
 
 print("\nGavin Butcher and Jacob Harback")
 print("Dronecomp: ")
@@ -68,9 +59,16 @@ try:
         print("\nStarting Drone!\n")
 
         sendmsg('command', 0)
-        sendmsg('takeoff')
+        sendmsg('takeoff', 8)
 
-        first_hoop()
+        #First
+        sendmsg('up 20', 8)
+        sendmsg('forward 200')
+
+        #second
+        sendmsg('go 200 25 20 40', 8)
+
+
 
         sendmsg('land')
 
