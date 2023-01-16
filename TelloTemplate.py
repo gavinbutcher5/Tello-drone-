@@ -59,14 +59,23 @@ try:
         print("\nStarting Drone!\n")
 
         sendmsg('command', 0)
+        sendmsg('battery?')
         sendmsg('takeoff', 8)
 
         #First
-        sendmsg('up 20', 8)
-        sendmsg('forward 200')
+        sendmsg('up 20')
+        sendmsg('forward 225', 8)
 
-        #second
-        sendmsg('go 200 25 20 40', 8)
+        #Second
+        sendmsg('go 200 10 70 50', 8)
+
+        #Third
+        sendmsg('ccw 180')
+        sendmsg('curve -40 -25 0 -20 -300 0 30')
+        sendmsg('curve -40 -25 0 -20 -300 0 30')
+        sendmsg('forward 100')
+
+
 
 
 
