@@ -44,7 +44,7 @@ recvThread.start()
 # Square Function
 def Square():
     for i in range(4):
-        sendmsg('foward 100')
+        sendmsg('forward 100')
         sendmsg('ccw 90')
 
 
@@ -66,7 +66,7 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        square()
+        Square()
 
         sendmsg('land')
 
