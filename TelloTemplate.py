@@ -42,14 +42,18 @@ recvThread.start()
 
 
 # Square Function
-def Square():
+
+def square():
     for i in range(4):
         sendmsg('forward 100')
         sendmsg('ccw 90')
 
 
 #Triangle Function
-
+def triangle():
+    for i in range(3):
+        sendmsg('forward 100')
+        sendmsg('ccw 120')
 
 print("\nGavin.Butcher")
 print("Squares & triangles: ")
@@ -66,7 +70,7 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        Square()
+        triangle()
 
         sendmsg('land')
 
